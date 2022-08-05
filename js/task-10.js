@@ -8,6 +8,8 @@ const destroy = document.querySelector("[data-destroy]");
 create.addEventListener("click", onButtonCreateClick);
 
 function onButtonCreateClick() {
+  destroyBoxes(); // очистит предыдущее
+
   let divAmaunt = input.value;
   createBoxes(divAmaunt);
 }
