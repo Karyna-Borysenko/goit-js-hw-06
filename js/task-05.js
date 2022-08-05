@@ -5,5 +5,4 @@ input.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
   nameOutput.textContent = event.currentTarget.value || "Anonymous";
-  console.log(nameOutput);
 }
