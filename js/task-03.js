@@ -29,5 +29,4 @@ const elements = images.map((image) => {
   return listEl;
 });
 
-console.log(galleryEl);
 galleryEl.append(...elements);
