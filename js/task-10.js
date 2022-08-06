@@ -8,23 +8,23 @@ const destroy = document.querySelector("[data-destroy]");
 create.addEventListener("click", onButtonCreateClick);
 
 function onButtonCreateClick() {
-  destroyBoxes(); // очистит предыдущее
-
   let divAmaunt = input.value;
   createBoxes(divAmaunt);
 }
 
 function createBoxes(amount) {
   let divArr = [];
+  let childrenCount = boxes.children.length;
+  let size = 30 + childrenCount * 10;
+
   for (let i = 0; i < amount; i += 1) {
     // создаем div
     let div = document.createElement("div");
     // добавляем рандомный цвет
     div.style.backgroundColor = getRandomHexColor();
     // задаем размер
-    let size = 30 + i * 10;
-    div.style.width = size + "px";
-    div.style.height = size + "px";
+    div.style.width = size + i * 10 + "px";
+    div.style.height = size + i * 10 + "px";
     // пуш
     divArr.push(div);
   }
